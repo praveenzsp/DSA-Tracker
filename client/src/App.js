@@ -6,22 +6,20 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Home from './components/Home';
 import Arrays from './components/Arrays';
-import Matrix from './components/Matrix';
 import String from './components/String';
-import SearchandSort from './components/SearchandSort';
 import LinkedList from './components/LinkedList';
 import BinaryTree from './components/BinaryTree';
 import Bst from './components/Bst';
 import Greedy from './components/Greedy';
-import Backtracking from './components/Backtracking';
 import StacksandQueues from './components/StacksandQueues';
-import Heap from './components/Heap';
 import Graph from './components/Graph';
 import Trie from './components/Trie';
 import Dp from './components/Dp';
-import BitManipulation from './components/BitManipulation';
 import {reducer,initialState} from './reducers/UserReducer'
 import Editor from './components/Editor';
+import BinarySearch from './components/BinarySearch';
+import Recursion from './components/Recursion';
+import Navbar from './components/Navbar';
 export const UserContext=createContext()
 
 const Routing=()=>{
@@ -58,15 +56,11 @@ const Routing=()=>{
         <Route  path='/arrays'>
           <Arrays />
         </Route>
-        <Route  path='/matrix'>
-          <Matrix />
-        </Route>
+
         <Route  path='/string'>
           <String/>
         </Route>
-        <Route  path='/search-sort'>
-          <SearchandSort/>
-        </Route>
+
         <Route  path='/linked-list'>
           <LinkedList/>
         </Route>
@@ -79,15 +73,11 @@ const Routing=()=>{
         <Route  path='/greedy'>
           <Greedy/>
         </Route>
-        <Route  path='/backtracking'>
-          <Backtracking/>
-        </Route>
+
         <Route  path='/stacks-queues'>
           <StacksandQueues/>
         </Route>
-        <Route  path='/heap'>
-          <Heap/>
-        </Route>
+
         <Route  path='/graph'>
           <Graph/>
         </Route>
@@ -97,8 +87,12 @@ const Routing=()=>{
         <Route  path='/dp'>
           <Dp/>
         </Route>
-        <Route  path='/bit-manipulation'>
-          <BitManipulation/>
+
+        <Route  path='/recursion'>
+          <Recursion/>
+        </Route>
+        <Route  path='/binary-search'>
+          <BinarySearch/>
         </Route>
         <Route  path='/editor'>
           <Editor/>

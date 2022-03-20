@@ -64,36 +64,42 @@ router.post('/signin',(req,res)=>{
             if(doMatch){
                const token = jwt.sign({_id:savedUser._id},JWT_SECRET)
                const {_id,email,solved_in_array,
-                solved_in_matrix,
+                // solved_in_matrix,
                 solved_in_string,
-                solved_in_search_and_sort,
+                // solved_in_search_and_sort,
                 solved_in_linked_list,
                 solved_in_binary_trees,
                 solved_in_bst,
                 solved_in_greedy,
-                solved_in_backtracking,
+                // solved_in_backtracking,
                 solved_in_stacks_and_queues,
-                solved_in_heap,
+                // solved_in_heap,
                 solved_in_graph,
                 solved_in_trie,
                 solved_in_dp,
-                solved_in_bit_manipulation} = savedUser
+                solved_in_binary_search,
+                solved_in_recursion,
+                // solved_in_bit_manipulation   
+            } = savedUser
                res.json({token,user:{_id,email,
                 solved_in_array,
-                solved_in_matrix,
+                // solved_in_matrix,
                 solved_in_string,
-                solved_in_search_and_sort,
+                // solved_in_search_and_sort,
                 solved_in_linked_list,
                 solved_in_binary_trees,
                 solved_in_bst,
                 solved_in_greedy,
-                solved_in_backtracking,
+                // solved_in_backtracking,
                 solved_in_stacks_and_queues,
-                solved_in_heap,
+                // solved_in_heap,
                 solved_in_graph,
                 solved_in_trie,
                 solved_in_dp,
-                solved_in_bit_manipulation}})
+                solved_in_binary_search,
+                solved_in_recursion,
+                // solved_in_bit_manipulation
+            }})
             }
             else{
                 return res.status(422).json({error:"Invalid Email or password"})
@@ -558,6 +564,62 @@ router.put('/add_to_solved_in_bit_manipulation/:userId',requireLogin,(req,res)=>
 router.put('/remove_from_solved_in_bit_manipulation/:userId',requireLogin,(req,res)=>{   //xxxxxxxxx
     User.findByIdAndUpdate(req.params.userId,{
         $pull:{solved_in_bit_manipulation:req.body.questionId}  //xxxxxxxxx
+    },{
+        new:true
+    })
+    .exec((err,result)=>{
+        if(err){
+            return res.status(422).json({error:err})
+        }else{
+            res.json(result)
+        }
+    })
+})
+router.put('/add_to_solved_in_recursion/:userId',requireLogin,(req,res)=>{ //xxxxxxxxxxxx
+    User.findByIdAndUpdate(req.params.userId,{
+        $push:{solved_in_recursion:req.body.questionId}  //xxxxxx
+    },{
+        new:true
+    })
+    .exec((err,result)=>{
+        if(err){
+            return res.status(422).json({error:err})
+        }else{
+            res.json(result)
+        }
+    })
+})
+router.put('/remove_from_solved_in_recursion/:userId',requireLogin,(req,res)=>{   //xxxxxxxxx
+    User.findByIdAndUpdate(req.params.userId,{
+        $pull:{solved_in_recursion:req.body.questionId}  //xxxxxxxxx
+    },{
+        new:true
+    })
+    .exec((err,result)=>{
+        if(err){
+            return res.status(422).json({error:err})
+        }else{
+            res.json(result)
+        }
+    })
+})
+router.put('/add_to_solved_in_binary_search/:userId',requireLogin,(req,res)=>{ //xxxxxxxxxxxx
+    User.findByIdAndUpdate(req.params.userId,{
+        $push:{solved_in_binary_search:req.body.questionId}  //xxxxxx
+    },{
+        new:true
+    })
+    .exec((err,result)=>{
+        if(err){
+            return res.status(422).json({error:err})
+        }else{
+            res.json(result)
+        }
+    })
+})
+router.put('/remove_from_solved_in_binary_search/:userId',requireLogin,(req,res)=>{   //xxxxxxxxx
+    User.findByIdAndUpdate(req.params.userId,{
+        $pull:{solved_in_binary_search:req.body.questionId}  //xxxxxxxxx
     },{
         new:true
     })

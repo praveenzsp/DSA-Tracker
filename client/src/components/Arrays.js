@@ -4,6 +4,7 @@ import {Link, useHistory} from 'react-router-dom'
 import './Arrays.css'
 import {Button,ProgressBar} from 'react-bootstrap'
 import {UserContext} from '../App'
+import Navbar from './Navbar'
 
 function Arrays() { //xxxxxx
   const [arrayQuestions,setArrayQuestions]=useState([]) //xxxxxx

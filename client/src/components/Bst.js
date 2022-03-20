@@ -24,7 +24,7 @@ function Bst() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setBstQuestions(data.all450Questions[6].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setBstQuestions(data.all450Questions[4].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

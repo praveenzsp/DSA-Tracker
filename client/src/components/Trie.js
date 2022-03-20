@@ -24,7 +24,7 @@ function Trie() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setTrieQuestions(data.all450Questions[12].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setTrieQuestions(data.all450Questions[9].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

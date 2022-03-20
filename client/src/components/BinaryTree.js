@@ -24,7 +24,7 @@ function BinaryTree() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setBinaryTreeQuestions(data.all450Questions[5].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setBinaryTreeQuestions(data.all450Questions[3].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

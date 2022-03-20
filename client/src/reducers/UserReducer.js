@@ -187,6 +187,30 @@ export const reducer = (state,action)=>{
             solved_in_bit_manipulation:action.payload
         }
     }   
+    if(action.type=='RECURSION-ADD'){
+        return {
+            ...state,
+            solved_in_recursion:action.payload
+        }
+    }   
+    if(action.type=='RECURSION-DELETE'){
+        return {
+            ...state,
+            solved_in_recursion:action.payload
+        }
+    }   
+    if(action.type=='BINARY-SEARCH-ADD'){
+        return {
+            ...state,
+            solved_in_binary_search:action.payload
+        }
+    }   
+    if(action.type=='BINARY-SEARCH-DELETE'){
+        return {
+            ...state,
+            solved_in_binary_search:action.payload
+        }
+    }   
 
     return state
  } 

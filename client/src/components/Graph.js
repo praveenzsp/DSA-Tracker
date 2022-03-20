@@ -24,7 +24,7 @@ function Graph() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setGraphQuestions(data.all450Questions[11].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setGraphQuestions(data.all450Questions[8].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

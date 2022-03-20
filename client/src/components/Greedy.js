@@ -24,7 +24,7 @@ function Greedy() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setGreedyQuestions(data.all450Questions[7].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setGreedyQuestions(data.all450Questions[5].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

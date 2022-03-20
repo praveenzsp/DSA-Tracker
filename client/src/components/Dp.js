@@ -24,7 +24,7 @@ function Dp() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setDpQuestions(data.all450Questions[13].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setDpQuestions(data.all450Questions[10].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])

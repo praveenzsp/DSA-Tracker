@@ -24,7 +24,7 @@ function String() { //xxxxxx
         toast.error(data.error)
       }
       else{
-        setStringQuestions(data.all450Questions[2].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+        setStringQuestions(data.all450Questions[1].questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
       }
     })
   },[])
