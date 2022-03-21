@@ -285,8 +285,8 @@
   color: #fff;
   z-index: 1;
   transition: 0.5s;
-  margin-top: 15px;
-  padding-bottom: 40px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .Home-arrays  .card .box .content p {
@@ -295,6 +295,8 @@
   color: rgba(255, 255, 255, 0.9);
   z-index: 1;
   transition: 0.5s;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .Home-arrays  .card .box .content a {
@@ -380,5 +382,29 @@ h6{
   padding-top: -20px;
   padding-bottom: 30px;
   font-family:Segoe UI,Arial,sans-serif;
+}
+
+#easy{
+  color: #23c186;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#medium{
+  color: rgba(255, 166, 0, 0.795);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#hard{
+  color:rgba(255, 0, 0, 0.76);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
