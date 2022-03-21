@@ -117,10 +117,11 @@ function String() { //xxxxxx
                       <div className="content">
                         <h2>{item.question_no}</h2>
                         <h3>{item.Topic}</h3>
+                        <p id={item.difficulty}>{item.difficulty}</p>
                         <p>{item.Problem}</p>
                         <h6>Status: {state.solved_in_string.includes(item.question_no)?'Completed ✔️':'Pending ❌'}</h6>
                         <div className='button-grp'>
-                        <a href={item.URL} id='Button1'>Solution</a>
+                        <a href={item.URL} id='Button1' target='_blank'>View Problem</a>
                         <a onClick={e=>history.push('/editor')}>Code Now</a>
                         <Button id='Button2' onClick={(e)=>state.solved_in_string.includes(item.question_no)?handleMarkAsUndone(e,item.question_no):handleMarkAsDone(e,item.question_no)}>{state.solved_in_string.includes(item.question_no)?'Mark As Undone':'Mark As Done'}</Button>
                         </div>

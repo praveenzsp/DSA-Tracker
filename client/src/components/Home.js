@@ -12,25 +12,25 @@ function Home() {
 
   const overall_solved=state.solved_in_array.length+state.solved_in_string.length+state.solved_in_linked_list.length+state.solved_in_binary_trees.length+state.solved_in_bst.length+state.solved_in_greedy.length+state.solved_in_recursion.length+state.solved_in_stacks_and_queues.length+state.solved_in_graph.length+state.solved_in_trie.length+state.solved_in_dp.length+state.solved_in_binary_search.length
 
-  useEffect(()=>{
-    fetch(`http://localhost:5000/home/${user._id}`,{
-      method:'get',
-      headers:{
-        "Authorization":"Bearer "+localStorage.getItem("jwt"),
-        "Content-Type":"application/json"
-      }
-    })
-    .then(res=>res.json())
-    .then(data=>{
-      if(data.error){
-        toast.error(data.error)
-      }
-      else{
-        console.log(data.all450Questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
-        console.log(overall_solved.length)
-      }
-    })
-  },[user._id])
+  // useEffect(()=>{
+  //   fetch(`http://localhost:5000/home/${user._id}`,{
+  //     method:'get',
+  //     headers:{
+  //       "Authorization":"Bearer "+localStorage.getItem("jwt"),
+  //       "Content-Type":"application/json"
+  //     }
+  //   })
+  //   .then(res=>res.json())
+  //   .then(data=>{
+  //     if(data.error){
+  //       toast.error(data.error)
+  //     }
+  //     else{
+  //       console.log(data.all450Questions) //xxxxxxxxxxx data.all450Questions[i] is the ith object in the whole big 450 questions array  
+  //       console.log(overall_solved.length)
+  //     }
+  //   })
+  // },[user._id])
 
   
 
@@ -230,3 +230,13 @@ function Home() {
 }
 
 export default Home
+
+// import React from 'react'
+
+// function Home() {
+//   return (
+//     <div>Home</div>
+//   )
+// }
+
+// export default Home
